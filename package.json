@@ -10,7 +10,9 @@
     "start": "node dist/index.js",
     "db:generate": "prisma generate",
     "db:push": "prisma db push",
-    "db:studio": "prisma studio"
+    "db:migrate": "prisma migrate dev",
+    "db:studio": "prisma studio",
+    "vercel-build": "prisma generate && npm run build"
   },
   "keywords": [],
   "author": "",
@@ -27,7 +29,10 @@
     "prisma": "^6.12.0"
   },
   "devDependencies": {
+    "@types/cors": "^2.8.19",
     "@types/express": "^5.0.3",
+    "@types/helmet": "^0.0.48",
+    "@types/morgan": "^1.9.10",
     "@types/node": "^24.0.15",
     "nodemon": "^3.1.10",
     "ts-node": "^10.9.2",
